@@ -18,14 +18,14 @@ public class Exercicio04 {
 			System.out.print("Informe o " + i + "º número: ");
 			numeros[i] = input.nextInt();
 			
-			if (numeros[i] < 0) {
+			if (numeros[i] <= 0) {
 				
 				do {
 					
 					System.out.print("Digite apenas números positivos: ");
 					numeros[i] = input.nextInt();
 					
-				} while (numeros[i] < 0);
+				} while (numeros[i] <= 0);
 				
 			}
 			

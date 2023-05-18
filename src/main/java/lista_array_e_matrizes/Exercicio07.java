@@ -40,10 +40,10 @@ public class Exercicio07 {
 				System.out.print(matrizA[i][j] + " ");
 				
 			}
-			
+			System.out.println();
 		}
 		
-		System.out.println("\n\nOs valores da Matriz Resultado são: \n");
+		System.out.println("\nOs valores da Matriz Resultado são: \n");
 		
 		for (int i = 0; i < matrizResultado.length; i++) {
 			for (int j = 0; j < matrizResultado[i].length; j++) {
@@ -51,6 +51,7 @@ public class Exercicio07 {
 				System.out.print(matrizResultado[i][j] + " ");
 				
 			}
+			System.out.println();
 		}
 		
 	input.close();

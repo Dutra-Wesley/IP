@@ -20,6 +20,8 @@ public class Exercicio06 {
 			System.out.print("Informe a temperatura do " + i + "º mês: ");
 			temperaturas[i] = input.nextDouble();
 			
+			totalTempAno += temperaturas[i];
+			
 			if (temperaturas[i] < menorTemp) {
 				
 				menorTemp = temperaturas[i];
@@ -31,12 +33,6 @@ public class Exercicio06 {
 				maiorTemp = temperaturas[i];
 				
 			}
-			
-		}
-		
-		for (int i = 1; i < temperaturas.length; i++) {
-			
-			totalTempAno += temperaturas[i];
 			
 		}
 		

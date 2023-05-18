@@ -21,6 +21,8 @@ public class WesleyQuestao02 {
 		System.out.print("Informe a quantidade de garrafas de �gua: ");
 		int agua = input.nextInt();
 		
+		// DENTRO DOS IFS ERA PARA SER COMPARADO O VALOR DAS GARRAFAS E NÃO A QUANTIDADE!!
+		
 		if (vinho < 20000) {
 			
 			System.out.println("O total a pagar de vinho �: R$" + formatador.format(vinho * 50 * 0.95));

@@ -24,7 +24,7 @@ public class Exercicio02 {
 			
 			if (novoNumero == numeros[i]) {
 				
-				System.out.println("ACHEI");
+				System.out.println("ACHEI, NA POSIÇÃO " + numeros[i]);
 				
 				break;
 				

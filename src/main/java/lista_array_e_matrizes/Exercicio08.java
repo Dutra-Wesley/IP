@@ -46,9 +46,10 @@ public class Exercicio08 {
 				System.out.print(matrizA[i][j] + " ");
 				
 			}
+			System.out.println();
 		}
 		
-		System.out.println("\n\nOs valores da Matriz B são: \n");
+		System.out.println("\nOs valores da Matriz B são: \n");
 		
 		for (int i = 0; i < matrizB.length; i++) {
 			for (int j = 0; j < matrizB[i].length; j++) {
@@ -56,9 +57,10 @@ public class Exercicio08 {
 				System.out.print(matrizB[i][j] + " ");
 				
 			}
+			System.out.println();
 		}
 		
-		System.out.println("\n\nO resultado da soma da Matriz A e Matriz B é: \n");
+		System.out.println("\nO resultado da soma da Matriz A e Matriz B é: \n");
 		
 		for (int i = 0; i < matrizResultado.length; i++) {
 			for (int j = 0; j < matrizResultado[i].length; j++) {
@@ -66,6 +68,7 @@ public class Exercicio08 {
 				System.out.print(matrizResultado[i][j] + " ");
 				
 			}
+			System.out.println();
 		}
 		
 	input.close();

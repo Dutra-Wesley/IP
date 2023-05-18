@@ -18,10 +18,6 @@ public class Exercicio05 {
 			System.out.print("Informe a " + i + "ª nota: ");
 			notas[i] = input.nextDouble();
 			
-		}
-		
-		for (int i = 1; i < notas.length; i++) {
-			
 			somaNotas += notas[i];
 			
 		}
