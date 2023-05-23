@@ -33,7 +33,7 @@ public class Exercicio05 {
 			
 		}
 		
-		System.out.println("O páis com mais medalhas é: " + paisMaisMedalhas + "\nCom um total de " + maisMedalhas + " medalhas");
+		System.out.println("O país com mais medalhas é: " + paisMaisMedalhas + "\nCom um total de " + maisMedalhas + " medalhas");
 		
 	input.close();	
 	}
