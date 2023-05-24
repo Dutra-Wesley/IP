@@ -11,8 +11,8 @@ public class Exercicio04 {
 		double tempoCorrida[] = new double [11];
 		
 		double totalTempoCorrida =0;
-		double atletaMaisRapido =tempoCorrida[1];
-		double atletaMaisDevagar =tempoCorrida[1];
+		double atletaMaisRapido =Double.POSITIVE_INFINITY;
+		double atletaMaisDevagar =0;
 		
 		for (int i = 1; i < tempoCorrida.length; i++) {
 			
@@ -38,8 +38,8 @@ public class Exercicio04 {
 		double mediaCorrida = totalTempoCorrida / 10;
 		
 		System.out.println("O tempo médio dos atletas é: " + mediaCorrida);
-		System.out.println("A diferença de tempo do mais devagar para o tempo médio é: " + (mediaCorrida - atletaMaisRapido));
-		System.out.println("A difrença de tempo do mais rápido para o tempo médio é: " + (atletaMaisDevagar - mediaCorrida));
+		System.out.println("A diferença de tempo do mais rápido para o tempo médio é: " + (mediaCorrida - atletaMaisRapido));
+		System.out.println("A diferença de tempo do mais devagar para o tempo médio é: " + (atletaMaisDevagar - mediaCorrida));
 		
 	input.close();
 	}
