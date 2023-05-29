@@ -8,7 +8,7 @@ public class Exercicio07 {
 
 		Scanner input = new Scanner (System.in);
 		
-		String jogoVelha [][] = {{"", "", "",},{"", "", "",},{"", "", ""}};
+		String jogoVelha [][] = {{" ", " ", " ",},{" ", " ", " ",},{" ", " ", " "}};
 		boolean interromper = false;
 		
 		for (int i = 0; i < jogoVelha.length; i++) {
@@ -41,7 +41,6 @@ public class Exercicio07 {
 						} else {
 							
 							System.out.print(" " + jogoVelha[line][column] + " ");
-							
 						}
 						
 					}
@@ -57,7 +56,7 @@ public class Exercicio07 {
 				// VERIFICAÇÕES
 				
 				// LINHA 0
-				if (jogoVelha[0][0].equalsIgnoreCase(jogoVelha[0][1]) && jogoVelha[0][1].equalsIgnoreCase(jogoVelha[0][2])) {
+				if (jogoVelha[0][0].equalsIgnoreCase(jogoVelha[0][1]) && jogoVelha[0][1].equalsIgnoreCase(jogoVelha[0][2]) && !jogoVelha[0][0].equalsIgnoreCase(" ")) {
 					if (jogoVelha[0][0].equalsIgnoreCase("X")) {
 						
 						System.out.println("O jogador do X venceu a partida - Linha 0");
@@ -71,11 +70,10 @@ public class Exercicio07 {
 						break;
 					}
 					
-					
 				}
 				
 				// LINHA 1
-				if (jogoVelha[1][0].equalsIgnoreCase(jogoVelha[1][1]) && jogoVelha[1][1].equalsIgnoreCase(jogoVelha[1][2])) {
+				if (jogoVelha[1][0].equalsIgnoreCase(jogoVelha[1][1]) && jogoVelha[1][1].equalsIgnoreCase(jogoVelha[1][2]) && !jogoVelha[1][0].equalsIgnoreCase(" ")) {
 					if (jogoVelha[1][0].equalsIgnoreCase("X")) {
 						
 						System.out.println("O jogador do X venceu a partida - Linha 1");
@@ -89,11 +87,10 @@ public class Exercicio07 {
 						break;
 					}
 					
-					
 				}
 				
 				// LINHA 2
-				if (jogoVelha[2][0].equalsIgnoreCase(jogoVelha[2][1]) && jogoVelha[0][1].equalsIgnoreCase(jogoVelha[2][2])) {
+				if (jogoVelha[2][0].equalsIgnoreCase(jogoVelha[2][1]) && jogoVelha[2][1].equalsIgnoreCase(jogoVelha[2][2]) && !jogoVelha[2][0].equalsIgnoreCase(" ")) {
 					if (jogoVelha[2][0].equalsIgnoreCase("X")) {
 						
 						System.out.println("O jogador do X venceu a partida - Linha 2");
@@ -107,30 +104,95 @@ public class Exercicio07 {
 						break;
 					}
 					
-					
 				}
 				
 				// COLUNA 0
-				if (jogoVelha[0][0].equalsIgnoreCase(jogoVelha[0][1]) && jogoVelha[0][1].equalsIgnoreCase(jogoVelha[0][2])) {
+				if (jogoVelha[0][0].equalsIgnoreCase(jogoVelha[1][0]) && jogoVelha[1][0].equalsIgnoreCase(jogoVelha[2][0]) && !jogoVelha[0][0].equalsIgnoreCase(" ")) {
 					if (jogoVelha[0][0].equalsIgnoreCase("X")) {
 						
-						System.out.println("O jogador do X venceu a partida - Linha 0");
+						System.out.println("O jogador do X venceu a partida - Coluna 0");
 						interromper = true;
 						break;
 						
 					} else {
 						
-						System.out.println("O jogador do O venceu a partida - Linha 0");
+						System.out.println("O jogador do O venceu a partida - Coluna 0");
 						interromper = true;
 						break;
 					}
 					
+				}
+				
+				// COLUNA 1
+				if (jogoVelha[0][1].equalsIgnoreCase(jogoVelha[1][1]) && jogoVelha[1][1].equalsIgnoreCase(jogoVelha[2][1]) && !jogoVelha[0][1].equalsIgnoreCase(" ")) {
+					if (jogoVelha[0][1].equalsIgnoreCase("X")) {
+						
+						System.out.println("O jogador do X venceu a partida - Coluna 1");
+						interromper = true;
+						break;
+						
+					} else {
+						
+						System.out.println("O jogador do O venceu a partida - Coluna 1");
+						interromper = true;
+						break;
+					}
+					
+				}
+				
+				// COLUNA 2
+				if (jogoVelha[0][2].equalsIgnoreCase(jogoVelha[1][2]) && jogoVelha[1][2].equalsIgnoreCase(jogoVelha[2][2]) && !jogoVelha[0][2].equalsIgnoreCase(" ")) {
+					if (jogoVelha[0][2].equalsIgnoreCase("X")) {
+						
+						System.out.println("O jogador do X venceu a partida - Coluna 2");
+						interromper = true;
+						break;
+						
+					} else {
+						
+						System.out.println("O jogador do O venceu a partida - Coluna 2");
+						interromper = true;
+						break;
+					}
+					
+				}
+				
+				// DIAGONAL PRINCIPAL
+				if (jogoVelha[0][0].equalsIgnoreCase(jogoVelha[1][1]) && jogoVelha[1][1].equalsIgnoreCase(jogoVelha[2][2]) && !jogoVelha[0][0].equalsIgnoreCase(" ")) {
+					if (jogoVelha[0][0].equalsIgnoreCase("X")) {
+						
+						System.out.println("O jogador do X venceu a partida - Diagonal Principal");
+						interromper = true;
+						break;
+						
+					} else {
+						
+						System.out.println("O jogador do O venceu a partida - Diagonal Principal");
+						interromper = true;
+						break;
+					}
+					
+				}
+				
+				// DIAGONAL SECUNDÁRIA
+				if (jogoVelha[0][2].equalsIgnoreCase(jogoVelha[1][1]) && jogoVelha[1][1].equalsIgnoreCase(jogoVelha[2][0]) && !jogoVelha[0][2].equalsIgnoreCase(" ")) {
+					if (jogoVelha[0][2].equalsIgnoreCase("X")) {
+						
+						System.out.println("O jogador do X venceu a partida - Diagonal Secundária");
+						interromper = true;
+						break;
+						
+					} else {
+						
+						System.out.println("O jogador do O venceu a partida - Diagonal Secundária");
+						interromper = true;
+						break;
+					}
 					
 				}
 				
 			}
 		}
-		
 		
 		input.close();
 	}

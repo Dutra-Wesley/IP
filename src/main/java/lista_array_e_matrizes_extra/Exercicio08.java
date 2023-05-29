@@ -9,8 +9,6 @@ public class Exercicio08 {
 		Scanner input = new Scanner (System.in);
 		
 		int totalVendas[] = new int [5];
-		int condicional =0;
-		String semanaMaisVendas = "";
 		
 		int vendas[][] = new int [5][5];
 		String produtos[] = new String [5];
@@ -31,23 +29,14 @@ public class Exercicio08 {
 				
 				totalVendas[i] += vendas[i][j];
 				
-				if (vendas[i][j] > condicional) {
-					
-					semanaMaisVendas = diasSemana[j];
-					condicional = vendas[i][j];
-					
-				}
-				
 			}
 		}
-			
+		
 		for (int i = 0; i < totalVendas.length; i++) {
 			
 			System.out.println("O total de vendas de " + produtos[i] + " foi: " + totalVendas[i]);
 			
 		}
-		
-		System.out.println("O dia da semana com mais vendas foi: "+ semanaMaisVendas);
 		
 		input.close();
 	}
