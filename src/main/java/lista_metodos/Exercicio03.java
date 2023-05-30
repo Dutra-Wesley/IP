@@ -9,7 +9,7 @@ public class Exercicio03 {
 		Scanner input = new Scanner (System.in);
 		
 		double notasAlunos[] = new double[3];
-		
+
 		for (int i = 0; i < notasAlunos.length; i++) {
 			System.out.print("Informe as notas do aluno: ");
 			notasAlunos[i] = input.nextDouble();
@@ -18,9 +18,18 @@ public class Exercicio03 {
 		System.out.print("Informe o tipo de cálculo, 1 ou 2: ");
 		int tipoCalculo = input.nextInt();
 		
-		calcularMedia(notasAlunos, tipoCalculo);
+		if (tipoCalculo < 1 || tipoCalculo > 2) {
+			
+			do {
+			System.out.print("Digite apenas 1 ou 2: ");
+			tipoCalculo = input.nextInt();
+			} while (tipoCalculo < 1 || tipoCalculo > 2);
+			
+		}
 		
 		input.close();
+		
+		calcularMedia(notasAlunos, tipoCalculo);
 	}
 
 	static void calcularMedia (double notasAlunos[], int tipoCalculo) {
@@ -37,13 +46,9 @@ public class Exercicio03 {
 		}
 		
 		if (tipoCalculo == 2) {
-			double nota1 =0;
-			double nota2 =0;
-			double nota3 =0;
-			
-			nota1 = notasAlunos[0];
-			nota2 = notasAlunos[1];
-			nota3 = notasAlunos[2];
+			double nota1 = notasAlunos[0];
+			double nota2 = notasAlunos[1];
+			double nota3 = notasAlunos[2];
 			
 			double mediaPonderada = (nota1*5) + (nota2*3) + (nota3*2);
 			

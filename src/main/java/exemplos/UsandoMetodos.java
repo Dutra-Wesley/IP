@@ -16,7 +16,7 @@ public class UsandoMetodos {
 		
 		System.out.println("Soma: " + somar(numeroA,numeroB));
 		System.out.println("Subtração: " + subtrair(numeroA,numeroB));
-		System.out.println("Multipliucação: " + multiplicar(numeroA,numeroB));
+		System.out.println("Multiplicação: " + multiplicar(numeroA,numeroB));
 		System.out.println("Divisão: " + dividir(numeroA,numeroB));
 		System.out.println("Número A dentro do Main: " + numeroA);
 		System.out.println("Número B dentro do Main: " + numeroB);

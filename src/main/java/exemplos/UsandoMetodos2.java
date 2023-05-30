@@ -18,14 +18,14 @@ public class UsandoMetodos2 {
 	static String lerNome() {
 		Scanner input = new Scanner (System.in);
 		
-		System.out.println("Informe o seu primeiro nome: ");
+		System.out.print("Informe o seu primeiro nome: ");
 		return  input.nextLine();
 	}
 	
 	static String lerSobrenome(String nome) {
 		Scanner input = new Scanner (System.in);
 		
-		System.out.println("Informe o seu sobrenome: ");
+		System.out.print("Informe o seu sobrenome: ");
 		return ": " + nome + " " + input.nextLine();
 	}
 	
