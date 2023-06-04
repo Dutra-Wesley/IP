@@ -36,7 +36,7 @@ public class Exercicio04 {
 				
 				if (matrizA[i][j] %2 == 0) {
 					
-					quantidadePares += +1;
+					quantidadePares++;
 					
 				}
 				

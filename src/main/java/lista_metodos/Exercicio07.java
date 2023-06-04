@@ -1,18 +1,45 @@
 package lista_metodos;
 
-import java.util.Scanner;
-
 public class Exercicio07 {
 
 	public static void main(String[] args) {
-
-		Scanner input = new Scanner (System.in);
-
-		System.out.print("Informe um número de 1 á 100: ");
-		double parametro = input.nextDouble();
 		
+		for (int i = 0; i <= 100; i++) {
+			
+			System.out.println("---------------");
+			if (verificarPrimo(i)) {
+				
+				System.out.println(i + " é primo");
+				
+			} else {
+				
+				System.out.println(i + " não é primo");
+				
+			}
+			
+		}
 		
-		input.close();
 	}
 
+	static boolean verificarPrimo (int i) {
+		
+		if (i == 0 || i == 1) {
+			
+			return false;
+			
+		}
+		
+		for (int j = 2; j < i; j++) {
+			
+			if (i %j == 0) {
+				
+				return false;
+				
+			}
+			
+		}
+		
+		return true;
+	}
+	
 }
