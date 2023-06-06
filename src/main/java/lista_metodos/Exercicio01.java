@@ -10,12 +10,13 @@ public class Exercicio01 {
 
 		System.out.print("Informe a idade do nadador: ");
 		int idadeNadador = input.nextInt();
-		categoria(idadeNadador);
+		
+		identificarCategoria(idadeNadador);
 		
 		input.close();
 	}
 
-	static void categoria(int idadeNadador) {
+	static void identificarCategoria(int idadeNadador) {
 
 		if (idadeNadador <= 10) {
 

@@ -10,12 +10,13 @@ public class Exercicio02 {
 
 		System.out.print("Informe a quantidade de pontos do aluno: ");
 		int pontosAluno = input.nextInt();
-		conceito(pontosAluno);
+		
+		identificarConceito(pontosAluno);
 		
 		input.close();
 	}
 
-	static void conceito(int pontosAluno) {
+	static void identificarConceito(int pontosAluno) {
 
 		if (pontosAluno <= 60) {
 

@@ -27,13 +27,13 @@ public class Exercicio06 {
 
 	static void identificarMenorNumero (int matrizA[][]) {
 		int posicaoMenorNumero[] = new int [2];
-		int menorNumero =0;
+		int menorNumero = matrizA[0][0];
 		
 		// VERIFICANDO MENOR NÚMERO
 		for (int i = 0; i < matrizA.length; i++) {
 			for (int j = 0; j < matrizA[i].length; j++) {
 				
-				if (matrizA[i][j] < menorNumero || i == 0 ) {
+				if (matrizA[i][j] < menorNumero) {
 					
 					menorNumero = matrizA[i][j];
 					posicaoMenorNumero[0] = i;
