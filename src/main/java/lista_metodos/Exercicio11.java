@@ -46,22 +46,10 @@ public class Exercicio11 {
 		// ORDENAR DE FORMA DECRESCENTE
 		if (ordenar.equalsIgnoreCase("DECRESCENTE")) {
 			
-			for (int i = 0; i < numeros.length; i++) {
-				
-				numeros[i] = -numeros[i];
-				
-			}
-			
 			Arrays.sort(numeros);
 			
-			for (int i = 0; i < numeros.length; i++) {
-				
-				numeros[i] = -numeros[i];
-				
-			}
-			
 			System.out.println("\nArray reorganizada de forma decrescente: ");
-			for (int i = 0; i < numeros.length; i++) {
+			for (int i = numeros.length - 1; i >= 0 ; i--) {
 				
 				System.out.println(numeros[i]);
 				
