@@ -8,83 +8,88 @@ public class Exercicio06 {
 		
 		Scanner input = new Scanner(System.in);
 
-		System.out.print("Agora digite uma palavra: ");
+		System.out.print("Digite uma palavra: ");
 		String palavra = input.nextLine();
 		
-		contarCaracteres(palavra);
-		mudarParaMaiscula(palavra);
-		
-		char palavraDividida[] = new char [palavra.length()];
-		palavra.getChars(0, palavra.length(), palavraDividida, 0);
-		identificarVogais(palavraDividida);
-		
-		System.out.print("Informe um termo para verificar: ");
+		System.out.print("Digite um termo: ");
 		String termo = input.nextLine();
 		
-		boolean termoInicia = IdentificarTermoInicio(palavra, termo);
-		
-		if (termoInicia) {
-			
-			System.out.println("A palavra começa com o termo informado!");
-			
-		}
-		
-		boolean termoTermina = IdentificarTermoTermina(palavra, termo);
-		
-		if (termoTermina) {
-			
-			System.out.println("A palavra termina com o termo informado!");
-			
-		}
+		contarCaracteres(palavra);
+		transformarMaisculo(palavra);
+		contarVogais(palavra);
+		verificarComeco(palavra, termo);
+		verificarFinal(palavra, termo);
 		
 		input.close();
 	}
 
-	static boolean IdentificarTermoTermina(String palavra, String termo) {
+	static void verificarFinal(String palavra, String termo) {
 		
-		boolean termoTermina = palavra.endsWith(termo);
+		boolean finaL = palavra.endsWith(termo);
 		
-		return termoTermina;
+		if (finaL) {
+			
+			System.out.println("A palavra termina com o termo informado!");
+			
+		} else {
+			
+			System.out.println("A palavra não termina com o termo informado!");
+			
+		}
+		
 	}
 
-	static boolean IdentificarTermoInicio(String palavra, String termo) {
+	static void verificarComeco(String palavra, String termo) {
 		
-		boolean termoInicia = palavra.startsWith(termo);
+		boolean comeco = palavra.startsWith(termo);
 		
-		return termoInicia;
+		if (comeco) {
+			
+			System.out.println("A palavra começa com o termo informado!");
+			
+		} else {
+			
+			System.out.println("A palavra não começa com o termo informado!");
+			
+		}
+		
 	}
 
-	static void identificarVogais(char palavraDividida[]) {
+	static void contarVogais(String palavra) {
+		
+		char fraseDivididade[] = new char[palavra.length()];
+
+		palavra.getChars(0, palavra.length(), fraseDivididade, 0);
 		
 		int contadorVogais = 0;
-		
-		for (int i = 0; i < palavraDividida.length; i++) {
 
-			if (palavraDividida[i] == 'a') {
+		for (int i = 0; i < fraseDivididade.length; i++) {
 
-				contadorVogais++;
-
-			}
-
-			if (palavraDividida[i] == 'e') {
+			if (fraseDivididade[i] == 'a') {
 
 				contadorVogais++;
 
 			}
 
-			if (palavraDividida[i] == 'i') {
+			if (fraseDivididade[i] == 'e') {
 
 				contadorVogais++;
 
 			}
 
-			if (palavraDividida[i] == 'o') {
+			if (fraseDivididade[i] == 'i') {
 
 				contadorVogais++;
 
 			}
 
-			if (palavraDividida[i] == 'u') {
+			if (fraseDivididade[i] == 'o') {
+
+				contadorVogais++;
+
+			}
+
+			if (fraseDivididade[i] == 'u') {
 
 				contadorVogais++;
 
@@ -92,23 +97,20 @@ public class Exercicio06 {
 
 		}
 		
-		System.out.println("Nessa palavra existem: " + contadorVogais + " vogais");
-		
+		System.out.println("A palavra possui " + contadorVogais + " vogais");
 		
 	}
 
-	static void mudarParaMaiscula(String palavra) {
+	static void transformarMaisculo(String palavra) {
 		
-		System.out.println("A palavra em maiscúla fica: " + palavra.toUpperCase());
-		
+		System.out.println("A palavra em maiúsculo: " + palavra.toUpperCase());
 		
 	}
 
 	static void contarCaracteres(String palavra) {
 		
-		System.out.println("A palavra digitada contém: " + palavra.length() + " caracteres");
-		
+		System.out.println("O tamanho da palavra é: " + palavra.length());
 		
 	}
-
+	
 }

@@ -11,19 +11,17 @@ public class Exercicio03 {
 		System.out.print("Digite uma frase: ");
 		String frase = input.nextLine();
 		
-		String fraseDividida[] = frase.split(" ");
-		
-		int contadorPalavras = 0;
-		
-		for (int i = 0; i < fraseDividida.length; i++) {
-			
-			contadorPalavras++;
-			
-		}
-		
-		System.out.println("Você digitou " + contadorPalavras + " palavras");
+		contarPalavras(frase);
 		
 		input.close();
+	}
+
+	static void contarPalavras(String frase) {
+		
+		String fraseDividida[] = frase.split(" ");
+		
+		System.out.println("Você digitou " + fraseDividida.length + " palavras");
+		
 	}
 
 }

@@ -15,35 +15,45 @@ public class Exercicio05 {
 
 		frase.getChars(0, frase.length(), fraseDivididade, 0);
 
+		int numeroVogais = contarVogais(fraseDivididade);
+		
+		System.out.println("A frase que você digitou foi: " + frase);
+		System.out.println("Ela contém: " + numeroVogais + " vogais");
+
+		input.close();
+	}
+
+	static int contarVogais(char[] fraseDivididade) {
+		
 		int contadorVogais = 0;
 
 		for (int i = 0; i < fraseDivididade.length; i++) {
 
-			if (fraseDivididade[i] == 'a') {
+			if (fraseDivididade[i] == 'a' || fraseDivididade[i] == 'A') {
 
 				contadorVogais++;
 
 			}
 
-			if (fraseDivididade[i] == 'e') {
+			if (fraseDivididade[i] == 'e' || fraseDivididade[i] == 'E') {
 
 				contadorVogais++;
 
 			}
 
-			if (fraseDivididade[i] == 'i') {
+			if (fraseDivididade[i] == 'i' || fraseDivididade[i] == 'I') {
 
 				contadorVogais++;
 
 			}
 
-			if (fraseDivididade[i] == 'o') {
+			if (fraseDivididade[i] == 'o' || fraseDivididade[i] == 'O') {
 
 				contadorVogais++;
 
 			}
 
-			if (fraseDivididade[i] == 'u') {
+			if (fraseDivididade[i] == 'u' || fraseDivididade[i] == 'U') {
 
 				contadorVogais++;
 
@@ -51,10 +61,8 @@ public class Exercicio05 {
 
 		}
 		
-		System.out.println("A frase que você digitou foi: " + frase);
-		System.out.println("Ela contém: " + contadorVogais + " vogais");
-
-		input.close();
+		return contadorVogais;
+		
 	}
 
 }

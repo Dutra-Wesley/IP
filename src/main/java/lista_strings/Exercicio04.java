@@ -14,6 +14,13 @@ public class Exercicio04 {
 		System.out.print("Agora digite uma palavra: ");
 		String palavra = input.nextLine();
 		
+		verificarPalavra(frase, palavra);
+		
+		input.close();
+	}
+
+	static void verificarPalavra(String frase, String palavra) {
+		
 		String fraseDividida[] = frase.split(" ");
 		
 		int contadorPalavrasRepetidas = 0;
@@ -32,7 +39,6 @@ public class Exercicio04 {
 		System.out.println("A palavra que você digitou foi: " + palavra);
 		System.out.println("A palavra aparece " + contadorPalavrasRepetidas + " vezes");
 		
-		input.close();
 	}
 
 }
