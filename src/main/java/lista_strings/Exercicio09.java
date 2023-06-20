@@ -18,20 +18,15 @@ public class Exercicio09 {
 
 	static void conjugarVerbo(String verbo) {
 		
-		String conjugar1 = verbo.replace("ar", "o");
-		String conjugar2 = verbo.replace("ar", "as");
-		String conjugar3 = verbo.replace("ar", "a");
-		String conjugar4 = verbo.replace("ar", "amos");
-		String conjugar5 = verbo.replace("ar", "ais");
-		String conjugar6 = verbo.replace("ar", "am");
+		verbo = verbo.substring(0, verbo.length() - 2);
 		
-		System.out.println("O verbo conjugado no presente fica:");
-		System.out.println("Eu " + conjugar1);
-		System.out.println("Tu " + conjugar2);
-		System.out.println("Ele " + conjugar3);
-		System.out.println("Nós " + conjugar4);
-		System.out.println("Vós " + conjugar5);
-		System.out.println("Eles " + conjugar6);
+		System.out.println("\nO verbo conjugado no presente fica:");
+		System.out.println("Eu " + verbo + "o");
+		System.out.println("Tu " + verbo + "as");
+		System.out.println("Ele " + verbo + "a");
+		System.out.println("Nós " + verbo + "amos");
+		System.out.println("Vós " + verbo + "áis");
+		System.out.println("Eles " + verbo + "am");
 		
 	}
 

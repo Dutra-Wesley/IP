@@ -18,19 +18,15 @@ public class Exercicio07 {
 
 	static void dividirPalavra(String palavra) {
 		
-		String letraDividida = "";
-		
 		for (int i = 0; i < palavra.length(); i++) {
 			
-			letraDividida+= palavra.charAt(i);
-			System.out.println(letraDividida);
+			System.out.println(palavra.substring(0, i+1));
 			
 		}
 		
-		for (int i = palavra.length() -1; i > 0; i--) {
+		for (int i = palavra.length() -1; i >= 0; i--) {
 			
-			letraDividida= palavra.substring(0, i);
-			System.out.println(letraDividida);
+			System.out.println(palavra.substring(0, i));
 			
 		}
 		
