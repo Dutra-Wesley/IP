@@ -18,13 +18,9 @@ public class Exercicio01 {
 
 	static void inverterPalavra(String palavra) {
 		
-		char palavraInvertida[] = new char [palavra.length()];
-		
-		palavra.getChars(0, palavra.length(), palavraInvertida, 0);
-		
-		for (int i = palavraInvertida.length -1 ; i >= 0; i--) {
+		for (int i = palavra.length() - 1; i >= 0 ; i--) {
 			
-			System.out.print(palavraInvertida[i]);
+			System.out.print(palavra.charAt(i));
 			
 		}
 		

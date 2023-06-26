@@ -58,38 +58,37 @@ public class Exercicio06 {
 	static void contarVogais(String palavra) {
 		
 		char fraseDivididade[] = new char[palavra.length()];
-
-		palavra.getChars(0, palavra.length(), fraseDivididade, 0);
+		fraseDivididade = palavra.toCharArray();
 		
 		int contadorVogais = 0;
 
 		for (int i = 0; i < fraseDivididade.length; i++) {
 
-			if (fraseDivididade[i] == 'a') {
+			if (fraseDivididade[i] == 'a' || fraseDivididade[i] == 'A') {
 
 				contadorVogais++;
 
 			}
 
-			if (fraseDivididade[i] == 'e') {
+			if (fraseDivididade[i] == 'e' || fraseDivididade[i] == 'E') {
 
 				contadorVogais++;
 
 			}
 
-			if (fraseDivididade[i] == 'i') {
+			if (fraseDivididade[i] == 'i' || fraseDivididade[i] == 'I') {
 
 				contadorVogais++;
 
 			}
 
-			if (fraseDivididade[i] == 'o') {
+			if (fraseDivididade[i] == 'o' || fraseDivididade[i] == 'O') {
 
 				contadorVogais++;
 
 			}
 
-			if (fraseDivididade[i] == 'u') {
+			if (fraseDivididade[i] == 'u' || fraseDivididade[i] == 'U') {
 
 				contadorVogais++;
 

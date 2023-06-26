@@ -18,8 +18,24 @@ public class Exercicio12 {
 
 	static void inverterNome(String nome) {
 		
+		String nomes[] = nome.split(" ");
+		String ultimoSobreNome = nomes[nomes.length -1];
 		
+		System.out.print(ultimoSobreNome.toUpperCase() + ". ");
 		
+		for (int i = 0; i < nomes.length -1 ; i++) {
+			
+			if (i ==  nomes.length - 2) {
+				
+				System.out.print(nomes[i] + ". ");
+				
+			} else {
+				
+				System.out.print(nomes[i] + " ");
+				
+			}
+			
+		}
 		
 	}
 

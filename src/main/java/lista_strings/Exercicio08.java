@@ -12,26 +12,26 @@ public class Exercicio08 {
 		String texto = input.nextLine();
 		
 		System.out.print("Digite a palavra que deseja substituir no texto: ");
-		String substituir = input.nextLine();
+		String procurar = input.nextLine();
 		
 		System.out.print("Agora digite a palavra que deseja colocar no lugar: ");
 		String novaPalavra = input.nextLine();
 		
-		substituirTexto(texto, substituir, novaPalavra);
+		substituirTexto(texto, procurar, novaPalavra);
 		
 		input.close();
 	}
 
-	static void substituirTexto(String texto, String substituir, String novaPalavra) {
+	static void substituirTexto(String texto, String procurar, String novaPalavra) {
 		
-		int localizar = texto.indexOf(substituir);
+		int posicao = texto.indexOf(procurar);
 		String novoTexto = "";
 		int contador = 0;
 		
-		while (localizar != -1) {
+		while (posicao != -1) {
 			
-			novoTexto = texto.replace(substituir, novaPalavra);
-			localizar = texto.indexOf(substituir, localizar + 1);
+			novoTexto = texto.replace(procurar, novaPalavra);
+			posicao = texto.indexOf(procurar, posicao + 1);
 			contador++;
 			
 		}
